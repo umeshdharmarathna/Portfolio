@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Umesh Chamika</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body { 
+            background-color: #0a0a0a; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Glass Card Style */
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 16px; 
+            backdrop-filter: blur(10px); 
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-5px);
+            border-color: #4facfe;
+        }
+
+        .gradient-text { 
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4facfe; }
+
+        /* Vanta Background Layer */
+        #vanta-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="vanta-bg"></div>
+
+    <section id="education" class="py-20 relative z-10">
+        <div class="flex items-center justify-center space-x-4 mb-12">
+            <div class="h-[1px] w-12 bg-cyan-900"></div>
+            <h2 class="text-2xl font-bold tracking-[0.2em] uppercase"><span class="gradient-text">My Education</span></h2>
+            <div class="h-[1px] w-12 bg-cyan-900"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="glass-card p-10 md:p-14 relative overflow-hidden border border-white/5 shadow-2xl">
+                
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[100px]"></div>
+
+                <div class="relative z-10">
+                    
+                    <div class="mb-12 relative pl-8 border-l-2 border-cyan-500/30">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-cyan-500 rounded-full shadow-[0_0_10px_#06b6d4]"></div>
+                        
+                        <span class="text-cyan-400 font-mono text-sm uppercase tracking-widest">Ongoing</span>
+                        <h3 class="text-white font-bold text-2xl mt-1">BSc (Hons) in Software Engineering</h3>
+                        <p class="text-gray-300 text-lg mt-2">SLTC Research University</p>
+                        <p class="text-gray-300 text-lg mt-2">C-Clark International Institute of Digital Science Campus</p>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Currently focusing on advanced software architectures, full-stack development, and integrating AI frameworks into digital solutions.
+                        </p>
+                    </div>
+
+                    <div class="mb-12 relative pl-8 border-l-2 border-white/10">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gray-600 rounded-full"></div>
+                        
+                        <span class="text-gray-500 font-mono text-sm uppercase tracking-widest">G.C.E. Advanced Level</span>
+                        <h3 class="text-white font-bold text-2xl mt-1">Engineering Technology Stream</h3>
+                        <p class="text-gray-300 text-lg mt-2">R / Ananda Maithreya Central College - AMCC (Balangoda)</p>
+                        <div class="flex flex-wrap gap-2 mt-4 text-gray-400 text-sm italic">
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Engineering Technology</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Science for Technology</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">ICT</span>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 border-l-2 border-white/10">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-gray-800 rounded-full"></div>
+                        
+                        <span class="text-gray-500 font-mono text-sm uppercase tracking-widest">G.C.E. Ordinary Level</span>
+                        <h3 class="text-white font-bold text-2xl mt-1">Completed Secondary Education</h3>
+                        <p class="text-gray-300 text-lg mt-2">R / B / Rajawaka Central College - RMV (Balangoda)</p>
+                        
+                        <div class="text-gray-500 mt-4 leading-relaxed text-sm">
+                            Foundation for technical and logical thinking, building a strong academic background.
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-4 text-gray-400 text-sm italic">
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Mathematics</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Science</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">English</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Sinhala</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">History</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Buddhism</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Geography</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Art</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-full border border-white/5">Health and Physical Education</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-6 bg-white/5 rounded-2xl border border-white/5 flex flex-wrap gap-8 justify-around text-center">
+                        <div>
+                            <p class="text-cyan-400 font-bold text-2xl">SLTC & C - CLARKE </p>
+                            <p class="text-gray-500 text-sm uppercase font-mono">Higher Education</p>
+                        </div>
+                        <div class="hidden md:block w-[1px] bg-white/10"></div>
+                        <div>
+                            <p class="text-cyan-400 font-bold text-2xl">AMCC & RMV</p>
+                            <p class="text-gray-500 text-sm uppercase font-mono">Foundation</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pb-12 text-center relative z-10">
+        <a href="./index.html" class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 px-8 rounded-full transition">Back to Home</a>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x4facfe,
+                backgroundColor: 0x0a0a0a,
+                points: 10.00,
+                maxDistance: 22.00,
+                spacing: 16.00
+            })
+        });
+    </script>
+</body>
+</html>

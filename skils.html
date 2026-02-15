@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Umesh Chamika</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body { 
+            background-color: #0a0a0a; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Photo Floating Animation */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Glass Card Style */
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 16px; 
+            backdrop-filter: blur(10px); 
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-5px);
+            border-color: #4facfe;
+        }
+
+        .gradient-text { 
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .skill-icon { font-size: 2.5rem; margin-bottom: 12px; color: #4facfe; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4facfe; }
+
+        #vanta-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="vanta-bg"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+        
+        <section class="mb-24">
+            <div class="flex items-center justify-center space-x-4 mb-16">
+                <div class="h-[1px] w-12 md:w-20 bg-cyan-900"></div>
+                <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-center"><span class="gradient-text">Technological Powerhouse</span></h2>
+                <div class="h-[1px] w-12 md:w-20 bg-cyan-900"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="glass-card p-8 text-center"> <i class="fab fa-java skill-icon"></i> <p class="text-gray-300 font-bold">Java</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fab fa-react skill-icon"></i> <p class="text-gray-300 font-bold">React</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fab fa-python skill-icon"></i> <p class="text-gray-300 font-bold">Python</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fab fa-js skill-icon"></i> <p class="text-gray-300 font-bold">JavaScript</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fab fa-php skill-icon"></i> <p class="text-gray-300 font-bold">PHP</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-hashtag skill-icon"></i> <p class="text-gray-300 font-bold">C#</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-code skill-icon"></i> <p class="text-gray-300 font-bold">C / C++</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-database skill-icon"></i> <p class="text-gray-300 font-bold">MongoDB</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-brain skill-icon"></i> <p class="text-gray-300 font-bold">AI / ML</p> </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex items-center justify-center space-x-4 mb-16">
+                <div class="h-[1px] w-12 md:w-20 bg-cyan-900"></div>
+                <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-center"><span class="gradient-text">Using Software Tools</span></h2>
+                <div class="h-[1px] w-12 md:w-20 bg-cyan-900"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="glass-card p-8 text-center"> <i class="fas fa-file-code skill-icon"></i> <p class="text-gray-300 font-bold">VS Code</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-laptop-code skill-icon"></i> <p class="text-gray-300 font-bold">IntelliJ IDEA</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fab fa-python skill-icon" style="color: #3776ab;"></i> <p class="text-gray-300 font-bold">PyCharm</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-rocket skill-icon" style="color: #ef5b25;"></i> <p class="text-gray-300 font-bold">Postman</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-palette skill-icon"></i> <p class="text-gray-300 font-bold">Photoshop</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-square-root-alt skill-icon"></i> <p class="text-gray-300 font-bold">MATLAB</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-robot skill-icon"></i> <p class="text-gray-300 font-bold">Ollama</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-link skill-icon"></i> <p class="text-gray-300 font-bold">LangChain</p> </div>
+                <div class="glass-card p-8 text-center"> <i class="fas fa-feather-alt skill-icon"></i> <p class="text-gray-300 font-bold">Antigravity</p> </div>
+            </div>
+        </section>
+
+        <div class="text-center mb-12">
+            <a href="./index.html" class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 px-8 rounded-full transition shadow-lg shadow-cyan-500/20">← Back to Portfolio</a>
+        </div>
+
+        <footer class="border-t border-gray-900 py-12 text-center text-gray-500 text-sm">
+            <p>© 2026 Designed for Umesh Chamika's Portfolio</p>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x4facfe,
+                backgroundColor: 0x0a0a0a,
+                points: 10.00,
+                maxDistance: 22.00,
+                spacing: 16.00
+            })
+        });
+    </script>
+</body>
+</html>

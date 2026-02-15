@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Umesh Chamika</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body { 
+            background-color: #0a0a0a; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        /* Photo Floating Animation */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .profile-container {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        /* Vanta Background */
+        #vanta-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .gradient-text { 
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 16px; 
+            backdrop-filter: blur(10px); 
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-5px);
+            border-color: #4facfe;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4facfe; }
+    </style>
+</head>
+<body>
+
+    <div id="vanta-bg"></div>
+
+    <section id="about-detailed" class="py-20 relative z-10">
+        <div class="flex items-center justify-center space-x-4 mb-12">
+            <div class="h-[1px] w-12 bg-cyan-900"></div>
+            <h2 class="text-2xl font-bold tracking-[0.2em] uppercase"><span class="gradient-text">About Me</span></h2>
+            <div class="h-[1px] w-12 bg-cyan-900"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="glass-card p-10 md:p-14 relative overflow-hidden border border-white/5 shadow-2xl">
+                
+                <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-[100px]"></div>
+
+                <div class="relative z-10">
+                    <div class="flex items-center space-x-5 mb-10 border-b border-white/5 pb-8">
+                        <div class="p-3 bg-cyan-500/10 rounded-lg">
+                            <i class="fas fa-user-astronaut text-2xl text-cyan-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-2xl tracking-tight">Umesh Chamika Dharmarathna</h4>
+                            <p class="text-cyan-400 font-mono text-sm uppercase tracking-widest">Future-Ready Software engineer</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 text-gray-300 text-lg leading-[1.8] font-normal">
+                        <p>
+                            I am a passionate <span class="text-white font-semibold">Software Engineering student</span> at 
+                            <span class="text-cyan-400 font-medium">SLTC Research University</span> and 
+                            <span class="text-cyan-400 font-medium">C-Clark Campus</span>, dedicated to building the next generation of digital solutions.
+                        </p>
+                        
+                        <p>
+                            With a strong foundation in <span class="text-white font-semibold border-b border-cyan-500/30">Full-stack development</span> and a keen interest in 
+                            <span class="text-white font-semibold">Artificial Intelligence</span>, I bridge the gap between complex backend logic 
+                            and intuitive user experiences.
+                        </p>
+                        
+                        <p>
+                            My expertise spans across languages like <span class="text-white font-medium">Java, Python, and JavaScript</span>, 
+                            with a specialized focus on AI tools such as <span class="text-cyan-400 font-medium">Ollama and LangChain</span>. 
+                            I believe that great software is not just about writing code; it’s about solving real-world problems efficiently.
+                        </p>
+                        
+                        <p>
+                            I thrive in fast-paced environments and am always eager to embrace emerging technologies to stay ahead of the curve. 
+                            Driven by curiosity and a commitment to excellence, I am focused on creating 
+                            <span class="text-white font-bold bg-cyan-500/10 px-2 py-1 rounded">impactful software that makes a difference.</span>
+                        </p>
+                    </div>
+
+                    <div class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <p class="text-gray-500 font-medium tracking-tight">Let's build something amazing together!</p>
+                        <a href="./connect_me.html" class="bg-white/5 hover:bg-cyan-500 text-white hover:text-black px-8 py-3 rounded-xl font-bold transition-all duration-300 border border-white/10">
+                            Work With Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pb-12 text-center relative z-10">
+        <a href="./index.html" class="bg-white/5 hover:bg-cyan-500 text-white hover:text-black px-8 py-3 rounded-xl font-bold transition-all duration-300 border border-white/10">Back to Home</a>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x4facfe,
+                backgroundColor: 0x0a0a0a,
+                points: 10.00,
+                maxDistance: 22.00,
+                spacing: 16.00
+            })
+        });
+    </script>
+</body>
+</html>

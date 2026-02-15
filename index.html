@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Umesh Chamika</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: white;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll margin for Skills */
+        #skills {
+            scroll-margin-top: 100px;
+        }
+
+        /* --- Responsive Grid System --- */
+        .grid-5 {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        /* Phone (Mobile) View */
+        @media (max-width: 768px) {
+            /* Navbar adjustments */
+            nav {
+                flex-direction: column;
+                padding: 15px !important;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                display: flex;
+                gap: 15px;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            /* Grid adjustments */
+            .grid-5 {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on phone */
+            }
+
+            /* Text adjustments */
+            .hero-content h1 { font-size: 2rem !important; }
+            .hero-content h3 { font-size: 1.5rem !important; }
+            
+            /* Button adjustments */
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        /* Laptop/PC View */
+        @media (min-width: 769px) {
+            .grid-5 {
+                grid-template-columns: repeat(5, 1fr); /* 5 columns on laptop */
+            }
+             .hero-buttons {
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+        /* --- Glass Card Style --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            border-color: #00f2fe;
+        }
+        .skill-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #4facfe;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Social Links styling */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-link {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .social-link:hover {
+            background: #4facfe;
+            color: black;
+            transform: scale(1.05);
+        }
+        
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0,0,0,0.5);
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: #4facfe; }
+
+        /* Animation Background Container */
+        #vanta-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90vh;
+            padding: 50px 0;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+        }
+        .neon-frame { padding: 10px; border: 2px solid #00f2fe; border-radius: 25px; }
+
+    </style>
+</head>
+<body id="top">
+    <div id="vanta-bg"></div>
+
+    <div class="container">
+        <nav>
+            <div class="logo" style="font-weight: bold; font-size: 1.5rem;">UMESH.ME</div>
+            <div class="nav-links">
+                <a href="./about.html">About</a>
+                <a href="#skills">Skills</a>
+                <a href="./education.html">Education</a>
+                <a href="#connect">Contact</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1 style="font-size: 3rem; margin-bottom: 10px;">UMESH CHAMIKA DHARMARATHNA</h1>
+                <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 20px;">Software Engineer.</h3>
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">I'm a Student at <span class="gradient-text">SLTC & C-Clark.</span></h1>
+                <p style="color: #9ca3af; margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">Building robust backend systems and intuitive user interfaces. Currently focusing on AI integrations, full-stack development and AI Tools developments.</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://github.com/umeshdharmarathna" target="_blank" class="social-link" style="background:#06b6d4; color:black; border:none;">View Projects</a>
+                    <a href="./connect_me.html" class="social-link" style="border: 1px solid #374151;">Contact Me</a>
+                </div>
+            </div>
+            
+            <div class="hero-image profile-container">
+                <div class="neon-frame">
+                    <img src="./photo/WhatsApp Image 2026-01-12 at 2.46.32 AM.jpeg" alt="Umesh" width="300">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 style="text-align: center; margin-top: 80px; letter-spacing: 3px; font-size: 2rem;">TECHNOLOGICAL POWERHOUSE</h2>
+            <div class="grid-5">
+                <div class="glass-card"><i class="fab fa-java skill-icon"></i><p>Java</p></div>
+                <div class="glass-card"><i class="fab fa-react skill-icon"></i><p>React</p></div>
+                <div class="glass-card"><i class="fab fa-python skill-icon"></i><p>Python</p></div>
+                <div class="glass-card"><i class="fab fa-js skill-icon"></i><p>JavaScript</p></div>
+                <div class="glass-card"><i class="fab fa-php skill-icon"></i><p>PHP</p></div>
+                <div class="glass-card"><i class="fas fa-hashtag skill-icon"></i><p>C#</p></div>
+                <div class="glass-card"><i class="fas fa-code skill-icon"></i><p>C / C++</p></div>
+                <div class="glass-card"><i class="fas fa-database skill-icon"></i><p>Mongo DB</p></div>
+                <div class="glass-card"><i class="fas fa-brain skill-icon"></i><p>AI / ML</p></div>
+                <div class="glass-card"><i class="fas fa-leaf skill-icon"></i><p>Spring Boot</p></div>
+            </div>
+        </section>
+
+        <h2 style="text-align: center; margin-top: 60px; letter-spacing: 3px; font-size: 2rem;">USING SOFTWARE TOOLS & AI</h2>
+        <div class="grid-5">
+            <div class="glass-card"><i class="fas fa-file-code skill-icon"></i><p>VS Code</p></div>
+            <div class="glass-card"><i class="fas fa-laptop-code skill-icon"></i><p>IntelliJ</p></div>
+            <div class="glass-card"><i class="fab fa-python skill-icon" style="color: #3776ab;"></i><p>PyCharm</p></div>
+            <div class="glass-card"><i class="fas fa-rocket skill-icon" style="color: #ef5b25;"></i><p>Postman</p></div>
+            <div class="glass-card"><i class="fas fa-palette skill-icon"></i><p>Photoshop</p></div>
+            <div class="glass-card"><i class="fas fa-robot skill-icon"></i><p>Ollama</p></div>
+            <div class="glass-card"><i class="fas fa-link skill-icon"></i><p>LangChain</p></div>
+        </div>
+
+        <section id="connect" style="text-align: center; padding: 80px 0; background: rgba(255, 255, 255, 0.03); border-radius: 24px; margin-top: 50px;">
+            <h2 class="bg-white/5 hover:bg-cyan-500 text-white hover:text-black px-8 py-3 rounded-xl font-bold transition-all duration-300 border border-white/10" style="font-size: 2rem; margin-bottom: 20px; display:inline-block;">CONNECT WITH ME</h2>
+            
+            <div class="social-links">
+                <a href="https://wa.me/94766797421" target="_blank" class="social-link wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://web.facebook.com/umesh.chamika.562" target="_blank" class="social-link fb"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/umesh_dharmarathna" target="_blank" class="social-link ig"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/umesh-chamika-223621229/" target="_blank" class="social-link li"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/umeshdharmarathna" target="_blank" class="social-link gh"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            
+            <div class="scroll-top" style="margin-top: 40px;">
+                <a href="#top" class="social-link" style="background:#06b6d4; color:black; border:none;">
+                 <class="fas fa-arrow-up"> Scroll to Top
+                </a>
+            </div>
+        </section>
+        
+        <footer style="text-align: center; padding: 20px; color: #888; font-size: 0.9rem;">
+            © 2026 Designed for Umesh Chamika's Portfolio
+        </footer>
+    </div>
+
+    <script>
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x4facfe,
+            backgroundColor: 0x0a0a0a,
+            points: 10.00,
+            maxDistance: 22.00,
+            spacing: 16.00
+        })
+    </script>
+</body>
+</html>
